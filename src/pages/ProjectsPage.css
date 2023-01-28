@@ -2,6 +2,11 @@
     /*height: 80rem;*/
     color: var(--dark-color-800);
     background-color: var(--green-color-50);
+    background-image: url("../public/tree-312507.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 75rem;
+    background-position: right;
     padding-top: 9.6rem;
     padding-bottom: 9.6rem;
 }
@@ -18,7 +23,8 @@
     margin-bottom: 9.6rem;
 
 }
-.projects-helpDeskHero {
+.projects-component--container {
+    /*margin-bottom: 9.6rem;*/
     width: 90%;
 }
 
@@ -85,32 +91,25 @@
     line-height: 1.7;
 }
 
-.btn {
-    background-color: var(--green-color-900);
-    outline: none;
-    border: none;
-    color: var(--green-color-50);
-    font-weight: 900;
-    font-family: inherit;
-    font-size: 1.6rem;
-    border-radius: 11px;
-
-
-    display: inline-block;
-    padding: 1.2rem 2.4rem;
-    margin-bottom: 3rem;
-    margin-right: .5rem;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: var(--green-color-800);
-    cursor: pointer;
-
-    transition: all 400ms;
-}
-
 .projects-description {
-    font-size: 1.8rem;
-    line-height: 1.5;
+    font-size: 2rem;
+    line-height: 1.6;
 }
+
+.projects-backEnd--container {
+    display: flex;
+    align-items: center;
+}
+
+.projects-backEnd {
+    background-color: var(--green-color-100);
+    border: solid 2px var(--dark-color-900);
+    padding: 2rem;
+    opacity: .97;
+}
+
+.projects-backEnd:last-child {
+    padding-bottom: 0;
+}
+
+

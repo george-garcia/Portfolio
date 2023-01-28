@@ -1,4 +1,4 @@
-function Project({subheading, heading, tld, tags, description}){
+function Project({subheading, heading, tld, tags, description, siteLink, gitLInk}){
 
     function renderTags(){
         return tags.map(tag => {
@@ -7,7 +7,7 @@ function Project({subheading, heading, tld, tags, description}){
     }
 
     return (
-        <div className={"projects-helpDeskHero"}>
+        <div className={"projects-component--container  "}>
             <h6 className={"projects-subheading"}>{subheading}</h6>
             <div className={"projects-heading--container"}>
                 <h2 className={"projects-heading"}>{heading}</h2>
@@ -19,8 +19,8 @@ function Project({subheading, heading, tld, tags, description}){
             </div>
             <div>
                 <p className="label">Actions:</p>
-                <button className={"btn"}>Visit Website</button>
-                <button className={"btn"}>View Code</button>
+                <a className={"btn"} href={siteLink} target={"_blank"}>Visit Website</a>
+                <a className={"btn"} href={gitLInk} target={"_blank"}>View Code</a>
             </div>
             <p className="label">Description:</p>
             <p className={"projects-description"}>

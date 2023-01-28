@@ -76,6 +76,8 @@ body {
     --green-color-800: #2E7D32;
     --green-color-900: #1B5E20;
 
+    --deep-green: #0F3411FF;
+
 
     --text-light-100: #eee;
 
@@ -152,4 +154,34 @@ body {
 
 .gap-1 {
     gap: 2rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: var(--green-color-900);
+    outline: none;
+    border: none;
+    color: var(--green-color-50);
+    font-weight: 900;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border-radius: 11px;
+    text-decoration: none;
+
+
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    margin-bottom: 3rem;
+    margin-right: .5rem;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: var(--green-color-800);
+    cursor: pointer;
+
+    transition: all 400ms;
 }
