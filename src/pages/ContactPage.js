@@ -2,6 +2,7 @@ import './ContactPage.css';
 import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from "../components/Modal";
+import {ReactComponent as ContactPicture} from "../public/undraw_happy_feeling_re_e76r.svg";
 
 function ContactPage() {
     const [name, setName] = useState('');
@@ -65,12 +66,14 @@ function ContactPage() {
                             <input className="contact-form--button" type="submit" value="Send Email"/>
 
                         </form>
-                        <div>
-                            <h3 className="contact-subheader">Connect with Us: Reach Out for a Consultation</h3>
-                            <p className="contact-text">Our team of experts will work with you to understand your unique
-                                needs and develop solutions to help you achieve smarter business
-                                outcomes. We're ready to help optimize your costs, maximize your performance, and
-                                evolve for a changing market.</p>
+                        <div className={"contact-image"}>
+                            {/*<h3 className="contact-subheader">Connect with Us: Reach Out for a Consultation</h3>*/}
+                            {/*<p className="contact-text">Our team of experts will work with you to understand your unique*/}
+                            {/*    needs and develop solutions to help you achieve smarter business*/}
+                            {/*    outcomes. We're ready to help optimize your costs, maximize your performance, and*/}
+                            {/*    evolve for a changing market.</p>*/}
+                            {/*<img src={ContactPicture} alt=""/>*/}
+                            <ContactPicture/>
                         </div>
                     </div>
                 </div>
