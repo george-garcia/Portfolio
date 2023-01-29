@@ -112,16 +112,6 @@
     padding-bottom: 0;
 }
 
-.contact-image {
-    width: 100%;
-}
 
-.contact-image svg {
-    width: 100%;
-    color: red;
-    stroke: white;
-    fill: red;
-    background: red;
-    /*background-color: white;*/
-}
+
 
