@@ -32,6 +32,56 @@
     /*margin-bottom: 9.6rem;*/
 }
 
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    /*background: url("../public/tree-312507.svg");*/
+    /*background-repeat: no-repeat;*/
+    /*width: 50px;*/
+}
+
+.logo img {
+    height: 3.2rem;
+}
+
+.toggle
+{
+    /*color: white;*/
+    position: relative;
+    /*width: 60px;*/
+    /*height: 60px;*/
+    /*background: url(https://i.ibb.co/HrfVRcx/menu.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 30px;*/
+    /*background-position: center;*/
+    /*cursor: pointer;*/
+}
+
+.resume:link,
+.resume:visited{
+    text-underline: none;
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 700;
+    /*padding: .5rem;*/
+}
+
+.resume:hover,
+.resume:active{
+    color: var(--primary-color-500);
+    transition: all 300ms;
+}
+
 .heroPage-video--container video {
 
     position: absolute;
@@ -47,7 +97,7 @@
     /*left: 0;*/
     /*width: 100%;*/
     /*height: 150%;*/
-    /*z-index: -1;*/
+    z-index: -1;
 }
 
 .overlay

@@ -20,9 +20,6 @@ function ContactPage() {
     // if(svg.current)
     //     svg.current.setAttribute('fill', 'red');
 
-    function test() {
-
-    }
 
     // if(svg.current)
     // svg.current.firstChild.setAttribute('fill', 'teal')
