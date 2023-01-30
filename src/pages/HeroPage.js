@@ -35,7 +35,7 @@ function HeroPage() {
                         PowerShell/Python/Bash scripting experience.
                     </p>
                 </div>
-                <a href="#">Explore</a>
+                {/*<a href="#">Explore</a>*/}
             </div>
 
         </div>
