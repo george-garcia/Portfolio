@@ -54,8 +54,8 @@ function ContactPage() {
 
     const modal = <Modal onClose={handleClose} actionBar={actionBar}>
         <p className="contact-modal--miniheading">Email Sent</p>
-        <h2 className="contact-modal">Thank you for contacting us</h2>
-        <p className="contact-text">Our team of certified professionals will reach out to you</p>
+        <h2 className="contact-modal">Thank you for contacting me</h2>
+        <p className="contact-text">I appreciate you reaching out. I'll get back to you soon.</p>
     </Modal>;
 
     return (
