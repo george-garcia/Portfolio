@@ -30,9 +30,9 @@ function HeroPage() {
                 </div>
                 <div className="black-border--p">
                     <p>
-                        Hi and thank you for visiting my portfolio. My current focus is React, Javascript, and CSS, web
-                        development. Currently working as a System Administrator with Systems, Networking, and
-                        PowerShell/Python/Bash scripting experience.
+                        Hi and thank you for visiting my portfolio. My current focus is web development, using 
+	                React, Javascript, and CSS. I am currently working as a System Administrator 
+	                with Systems, Networking, and PowerShell/Python/Bash scripting experience.
                     </p>
                 </div>
                 {/*<a href="#">Explore</a>*/}

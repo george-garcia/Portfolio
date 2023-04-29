@@ -23,7 +23,7 @@ function ProjectsPage() {
         siteLink: 'https://helpdeskhero.tech',
         gitLink: 'https://github.com/george-garcia/Ticketing-tool-client',
 
-        description: 'This is a Full-Stack IT Ticketing System for tracking issues/errors/bugs. It allows a user to sign in with their email and create tickets for the issues they have. Techs can then view these issues, assign them, and work them. Each user has a dashboard that tracks all open tickets, tickets they are assigned, and more. User, Ticket, and Authentication data is collected by querrying the appropriate API route from our Back-End project listed below this one. '
+        description: 'This is a Full-Stack IT Ticketing System for tracking issues/errors/bugs. It allows a user to sign in with their email and create tickets for the issues they have. Techs can then view these issues, assign them, and begin working on them. Each user has a dashboard that tracks all open tickets, the tickets they are assigned, and more. User, Ticket, and Authentication data is collected by querying the appropriate API route from our Back-End project listed below this one. '
     }
 
     const helpDeskHeroBE = {
@@ -55,7 +55,7 @@ function ProjectsPage() {
         tags: ['React', 'Javascript', 'CSS', 'Email Integration'],
         siteLink: 'https://georgegarciadev.com',
         gitLink: 'https://github.com/george-garcia/Portfolio',
-        description: "I developed this site with the idea to use a nice full screen video as the hero page. After narrowing down a few choices I decided on the serene duck family. It gives the portfolio a vey calm and earthy personality so I decided to theme my website around that with the shades of green and brown to match the video."
+        description: "I developed this site with the idea to use a nice, full-screen video as the hero page. After narrowing down a few choices, I decided on a serene duck family. It gives the portfolio a very calm and earthy personality, so I decided to theme my website around that with the shades of green and brown to match the video."
     }
 
     return (<div className={"section-projects"}>
