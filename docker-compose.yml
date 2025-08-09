@@ -2,7 +2,7 @@ version: "3.8"
 services:
   react-app:
     build: .
-    container_name: react_app
+    container_name: portfolio
     ports:
       - "8080:80"  # Caddy will forward to 8080
     restart: unless-stopped
