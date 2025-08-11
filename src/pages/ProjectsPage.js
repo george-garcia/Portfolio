@@ -3,6 +3,9 @@ import Project from '../components/Project'
 import helpDeskHeroImage from '../public/HDH-FE.png'
 import cyberFortressITImage from '../public/CFIT.png'
 import portfolioImage from '../public/portfolio-img.png'
+import cyberfortressITgif from '../public/CFITgif.gif'
+import helpDeskHeroGif from '../public/HelpDeskHerogif.gif'
+import portfoliogif from '../public/portfoliogif.gif'
 
 function ProjectsPage () {
   /*
@@ -27,7 +30,7 @@ function ProjectsPage () {
       'HTML',
       'CSS'
     ],
-    siteLink: 'https://helpdeskhero.georgegarciadev.com',
+    siteLink: 'http://helpdeskhero.georgegarciadev.com',
     gitLink: 'https://github.com/george-garcia/Ticketing-tool-client',
 
     description:
@@ -36,20 +39,20 @@ function ProjectsPage () {
 
   const helpDeskHeroBE = {
     subheading: 'Full-Stack Project // Back-End',
-    heading: 'Help Desk Hero',
-    tld: '.localhost',
+    heading: 'apis',
+    tld: '.georgegarciadev.com',
     tags: [
       'Node.js',
       'Mongoose',
       'Express',
       'BCrypt',
-      'MongoDB Atlas Cloud Database',
       'CORS',
       'dotEnv',
       'Authentication',
       'Json Webtoken',
       'Helmet',
-      'REST API'
+      'REST API',
+      'MongoDB Atlas Cloud Database'
     ],
     siteLink: 'https://helpdeskhero.georgegarciadev.com',
     gitLink: 'https://github.com/george-garcia/Ticketing-tool-server',
@@ -97,7 +100,17 @@ function ProjectsPage () {
           />
           <div className={'projects-gifs'}>
             <span className='label'>Hover for preview: </span>
-            <img src={helpDeskHeroImage} alt='' className={'animated-gif'} />
+            <img
+              src={helpDeskHeroImage}
+              alt='Cyber Fortress IT preview'
+              className='animated-gif'
+              onMouseEnter={e => {
+                e.currentTarget.src = helpDeskHeroGif // swap to GIF
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.src = helpDeskHeroImage // back to static
+              }}
+            />
           </div>
         </div>
 
@@ -159,7 +172,19 @@ function ProjectsPage () {
           />
           <div className={'projects-gifs'}>
             <span className='label'>Hover for preview: </span>
-            <img src={cyberFortressITImage} alt='' className={'animated-gif'} />
+            <div className='preview-container'>
+              <img
+                src={cyberFortressITImage}
+                alt='Cyber Fortress IT preview'
+                className='animated-gif'
+                onMouseEnter={e => {
+                  e.currentTarget.src = cyberfortressITgif // swap to GIF
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.src = cyberFortressITImage // back to static
+                }}
+              />
+            </div>
           </div>
         </div>
 
@@ -175,7 +200,17 @@ function ProjectsPage () {
           />
           <div className={'projects-gifs'}>
             <span className='label'>Hover for preview: </span>
-            <img src={portfolioImage} alt='' className={'animated-gif'} />
+            <img
+              src={portfolioImage}
+              alt='image of portfolio hero page'
+              className='animated-gif'
+              onMouseEnter={e => {
+                e.currentTarget.src = portfoliogif // swap to GIF
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.src = portfolioImage // back to static
+              }}
+            />
           </div>
         </div>
       </div>
