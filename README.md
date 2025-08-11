@@ -1,6 +1,6 @@
 # George Garcia Developer Portfolio
 
-![Portfolio Demo](./public/portfoliogif.gif)
+![Portfolio Demo](https://github.com/george-garcia/Portfolio/blob/master/src/public/portfoliogif.gif)
 
 Welcome to my portfolio repository! This site showcases a selection of my key projects, highlighting my skills in **React**, **JavaScript**, **CSS**, and **Full-Stack Development**.
 
