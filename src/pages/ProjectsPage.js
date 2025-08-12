@@ -10,7 +10,7 @@ import portfoliogif from '../public/portfoliogif.gif'
 function ProjectsPage () {
   /*
 
-    Javascript HTML CSS React Redux Redux Toolkit, Authentication, JSON Webtoken, React
+    Javascript HTML CSS React Redux Redux Toolkit, Authentication, JSON Web Token, React
                             Router, Nivo/Pie
      */
 
@@ -23,7 +23,7 @@ function ProjectsPage () {
       'Redux',
       'Redux Toolkit',
       'Authentication',
-      'Json Webtoken',
+      'JSON Web Token',
       'React Router',
       'Nivo/Pie Charts',
       'Javascript',
@@ -49,7 +49,7 @@ function ProjectsPage () {
       'CORS',
       'dotEnv',
       'Authentication',
-      'Json Webtoken',
+      'Json Web Token',
       'Helmet',
       'REST API',
       'MongoDB Atlas Cloud Database'
@@ -58,7 +58,7 @@ function ProjectsPage () {
     gitLink: 'https://github.com/george-garcia/Ticketing-tool-server',
 
     description:
-      'This is a Rest API for the HelpDeskHero project. Data is stored and retrieved from our Atlas Cloud Mongo Database. Routes are protected using JSON Webtokens. This API allows us to create and save users and tickets. Tickets can have Title, Description, Status, Assigned, Priority, and Impact Properties. Users are also able to save their comments to their tickets to show their ongoing work.'
+      'This is a REST API for the HelpDeskHero project. Data is stored and retrieved from our Atlas Cloud Mongo Database. Routes are protected using JSON Web Tokens. This API allows us to create and save users and tickets. Tickets can have Title, Description, Status, Assigned, Priority, and Impact Properties. Users are also able to save their comments to their tickets to show their ongoing work.'
   }
 
   const cyberFortressIT = {
@@ -69,7 +69,7 @@ function ProjectsPage () {
     siteLink: 'https://cyberfortressit.georgegarciadev.com',
     gitLink: 'https://github.com/george-garcia/tech-website-cluster',
     description:
-      'CyberFortressIT is a Managed Technology Service Provider mock website. It offers 4 categories of technology solutions: Cloud, Data, Application, and Cyber. This page is designed to be a marketing website for a company that offers these solutions to its client.'
+      'CyberFortressIT is a Managed Technology Service Provider mock website. It offers four categories of technology solutions: Cloud, Data, Application, and Cyber. This page is designed to be a marketing website for a company that offers these solutions to its client.'
   }
   const portfolio = {
     subheading: 'Single Page Application',
@@ -79,7 +79,7 @@ function ProjectsPage () {
     siteLink: 'https://georgegarciadev.com',
     gitLink: 'https://github.com/george-garcia/Portfolio',
     description:
-      'I developed this site with the idea to use a nice full screen video as the hero page. After narrowing down a few choices I decided on the serene duck family. It gives the portfolio a vey calm and earthy personality so I decided to theme my website around that with the shades of green and brown to match the video.'
+      'I developed this site with the idea to use a nice full screen video as the hero page. After narrowing down a few choices I decided on the serene duck family. It gives the portfolio a very calm and earthy personality so I decided to theme my website around that with shades of green and brown to match the video.'
   }
 
   return (
@@ -130,7 +130,7 @@ function ProjectsPage () {
               <p className={'projects-description mb-2'}>
                 We can Create users and login by <strong>POST</strong>ing to
                 this route. Passwords are hashed before they are stored using
-                bcrypt, and Authentication is handled via JSON Webtokens.
+                bcrypt, and Authentication is handled via JSON Web tokens.
               </p>
 
               <p className='label'>Tickets Route: /api/v1/tickets</p>
