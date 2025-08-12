@@ -34,7 +34,7 @@ function ProjectsPage () {
     gitLink: 'https://github.com/george-garcia/Ticketing-tool-client',
 
     description:
-      'This is a Full-Stack IT Ticketing System for tracking issues/errors/bugs. It allows a user to sign in with their email and create tickets for the issues they have. Techs can then view these issues, assign them, and work them. Each user has a dashboard that tracks all open tickets, tickets they are assigned, and more. User, Ticket, and Authentication data is collected by querrying the appropriate API route from our Back-End project listed below this one. '
+      'This is a Full-Stack IT Ticketing System for tracking issues/errors/bugs. It allows a user to sign in with their email and create tickets for the issues they have. Techs can then view these issues, assign them, and work them. Each user has a dashboard that tracks all open tickets, assigned tickets, and more. User, Ticket, and Authentication data is collected by querying the appropriate API route from our Back-End project listed below this one. '
   }
 
   const helpDeskHeroBE = {
