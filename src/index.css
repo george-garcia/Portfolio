@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink font-sans text-slate-300 antialiased;
+  }
+  ::selection {
+    @apply bg-accent-fuchsia/30 text-white;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-indigo via-accent-fuchsia to-accent-cyan bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-white text-ink hover:scale-[1.03] hover:shadow-[0_0_30px_-5px_rgba(217,70,239,0.6)];
+  }
+  .btn-ghost {
+    @apply glass text-white hover:scale-[1.03] hover:bg-white/10;
+  }
+  .chip {
+    @apply rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300;
+  }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
