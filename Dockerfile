@@ -5,13 +5,9 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 
-# EmailJS keys are inlined at build (until the SES endpoint replaces them).
-ARG VITE_EMAILJS_SERVICE_ID=
-ARG VITE_EMAILJS_TEMPLATE_ID=
-ARG VITE_EMAILJS_PUBLIC_KEY=
-ENV VITE_EMAILJS_SERVICE_ID=$VITE_EMAILJS_SERVICE_ID \
-    VITE_EMAILJS_TEMPLATE_ID=$VITE_EMAILJS_TEMPLATE_ID \
-    VITE_EMAILJS_PUBLIC_KEY=$VITE_EMAILJS_PUBLIC_KEY
+# SES contact endpoint (API Gateway URL), inlined at build.
+ARG VITE_CONTACT_ENDPOINT=
+ENV VITE_CONTACT_ENDPOINT=$VITE_CONTACT_ENDPOINT
 RUN npm run build
 
 # ── Serve stage ───────────────────────────────────────────────────────────────

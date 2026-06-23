@@ -1,20 +1,25 @@
-import emailjs from '@emailjs/browser'
-
 /**
- * Single integration point for sending a contact-form message.
- *
- * Today this uses EmailJS (client-side). When the AWS SES path is ready, swap
- * the body of this function for a `fetch()` POST to an SES-backed endpoint
- * (e.g. API Gateway + Lambda). Callers do not need to change.
+ * Sends the contact form to the SES-backed endpoint (API Gateway + Lambda).
+ * Single integration point: to change providers, change this function only.
  */
 export async function sendContactMessage(formEl: HTMLFormElement): Promise<void> {
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-
-  if (!serviceId || !templateId || !publicKey) {
-    throw new Error('Email service is not configured.')
+  const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT
+  if (!endpoint) {
+    throw new Error('Contact form is not configured.')
   }
 
-  await emailjs.sendForm(serviceId, templateId, formEl, { publicKey })
+  const data = new FormData(formEl)
+  const res = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: data.get('user_name'),
+      email: data.get('user_email'),
+      message: data.get('message'),
+    }),
+  })
+
+  if (!res.ok) {
+    throw new Error('Could not send your message. Please try again.')
+  }
 }
