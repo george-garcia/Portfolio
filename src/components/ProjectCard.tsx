@@ -86,6 +86,16 @@ export function ProjectCard({ project, featured }: { project: Project; featured?
               Visit <ArrowUpRight className="h-4 w-4" />
             </a>
           )}
+          {project.adminLink && (
+            <a
+              href={project.adminLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost px-4 py-2 text-sm"
+            >
+              Admin <ArrowUpRight className="h-4 w-4" />
+            </a>
+          )}
           <a
             href={project.gitLink}
             target="_blank"

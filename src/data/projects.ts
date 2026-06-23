@@ -6,6 +6,8 @@ export interface Project {
   description: string
   gitLink: string
   siteLink?: string
+  /** Optional secondary link, e.g. an admin / back-office console. */
+  adminLink?: string
   /** Optional screenshot. When omitted, the card shows a gradient placeholder.
    *  (Add fresh captures of the redesigned apps once deployed.) */
   image?: string
@@ -27,12 +29,14 @@ export const projects: Project[] = [
       'Vite',
       'Double-Entry Ledger',
       'REST API',
+      'Admin Console',
       'Docker',
     ],
     siteLink: 'https://bank.georgegarciadev.com',
+    adminLink: 'https://bank-admin.georgegarciadev.com',
     gitLink: 'https://github.com/george-garcia/mock-bank',
     description:
-      'A mock retail bank built on a double-entry ledger. Card authorizations land as holds, then settle into posted transactions. It also exposes two partner-facing products: a card-acceptance Network API and a Plaid-style account-linking Connect API. Both authenticate with a partner API key.',
+      'A mock retail bank built on a double-entry ledger. Card authorizations land as holds, then settle into posted transactions. It also exposes two partner-facing products: a card-acceptance Network API and a Plaid-style account-linking Connect API. Both authenticate with a partner API key. A separate staff admin console adds customer, account, and audit oversight.',
     featured: true,
   },
   {
