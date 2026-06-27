@@ -17,6 +17,29 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    subheading: 'Full-Stack · Video Dating',
+    heading: 'Glow',
+    tld: '.georgegarciadev.com',
+    tags: [
+      'NestJS',
+      'TypeScript',
+      'PostgreSQL',
+      'Drizzle',
+      'React',
+      'Vite',
+      'Socket.IO',
+      'LiveKit',
+      'Redis',
+      'Phone Auth',
+      'Docker',
+    ],
+    siteLink: 'https://glow.georgegarciadev.com',
+    gitLink: 'https://github.com/george-garcia/Glow',
+    description:
+      'A video-first dating app. People sign up with only a phone number, get matched in real time over WebSockets, and meet on a one-to-one video call running on LiveKit. A NestJS API backed by Neon Postgres and Redis handles profiles, matching, and call signaling, with a separate staff console for moderation.',
+    featured: true,
+  },
+  {
     subheading: 'Full-Stack · Fintech',
     heading: 'Mock Bank',
     tld: '.georgegarciadev.com',
