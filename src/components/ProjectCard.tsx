@@ -96,14 +96,16 @@ export function ProjectCard({ project, featured }: { project: Project; featured?
               Admin <ArrowUpRight className="h-4 w-4" />
             </a>
           )}
-          <a
-            href={project.gitLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-ghost px-4 py-2 text-sm"
-          >
-            <Github className="h-4 w-4" /> Code
-          </a>
+          {project.gitLink && (
+            <a
+              href={project.gitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost px-4 py-2 text-sm"
+            >
+              <Github className="h-4 w-4" /> Code
+            </a>
+          )}
         </div>
       </div>
     </motion.article>

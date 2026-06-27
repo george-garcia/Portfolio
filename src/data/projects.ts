@@ -4,7 +4,8 @@ export interface Project {
   tld: string
   tags: string[]
   description: string
-  gitLink: string
+  /** Public repo link. Omitted for private projects (no Code button is shown). */
+  gitLink?: string
   siteLink?: string
   /** Optional secondary link, e.g. an admin / back-office console. */
   adminLink?: string
@@ -34,7 +35,6 @@ export const projects: Project[] = [
       'Docker',
     ],
     siteLink: 'https://glow.georgegarciadev.com',
-    gitLink: 'https://github.com/george-garcia/Glow',
     description:
       'A video-first dating app. People sign up with only a phone number, get matched in real time over WebSockets, and meet on a one-to-one video call running on LiveKit. A NestJS API backed by Neon Postgres and Redis handles profiles, matching, and call signaling, with a separate staff console for moderation.',
     featured: true,
