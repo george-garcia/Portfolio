@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Github, Menu, X } from 'lucide-react'
 import { cn } from '../lib/cn'
-import resume from '../assets/George_Garcia_Resume_Software_Engineer.pdf'
 
 const LINKS: [string, string][] = [
   ['Work', '#work'],
@@ -51,9 +50,6 @@ export function Navbar() {
           >
             <Github className="h-5 w-5" />
           </a>
-          <a href={resume} download className="btn btn-ghost px-4 py-2 text-sm">
-            Résumé
-          </a>
         </div>
 
         <button
@@ -78,9 +74,6 @@ export function Navbar() {
                 {label}
               </a>
             ))}
-            <a href={resume} download className="font-semibold text-gradient">
-              Résumé
-            </a>
           </div>
         </div>
       )}

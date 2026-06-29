@@ -1,7 +1,6 @@
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, Download, Github } from 'lucide-react'
+import { ArrowRight, Github } from 'lucide-react'
 import { RotatingText } from '../components/RotatingText'
-import resume from '../assets/George_Garcia_Resume_Software_Engineer.pdf'
 
 const container: Variants = {
   hidden: {},
@@ -86,9 +85,6 @@ export function Hero() {
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-4">
             <a href="#work" className="btn btn-primary px-6 py-3">
               View my work <ArrowRight className="h-4 w-4" />
-            </a>
-            <a href={resume} download className="btn btn-ghost px-6 py-3">
-              <Download className="h-4 w-4" /> Résumé
             </a>
             <a
               href="https://github.com/george-garcia"
