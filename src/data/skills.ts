@@ -12,6 +12,9 @@ export const TECH_MARQUEE: string[] = [
   'Docker',
   'Cognito',
   'REST APIs',
+  'Socket.IO',
+  'Redis',
+  'LiveKit / WebRTC',
   'Express',
   'MongoDB',
   'Python',
@@ -33,7 +36,15 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     title: 'Backend',
-    items: ['Node.js', 'NestJS', 'Express', 'REST APIs', 'PostgreSQL / Drizzle', 'MongoDB'],
+    items: [
+      'Node.js',
+      'NestJS',
+      'REST APIs',
+      'PostgreSQL / Drizzle',
+      'Socket.IO / WebSockets',
+      'Redis',
+      'LiveKit / WebRTC',
+    ],
   },
   {
     title: 'Cloud & DevOps',

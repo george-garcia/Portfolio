@@ -44,3 +44,16 @@
     background-size: 56px 56px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-float,
+  .animate-pulse-dot,
+  .animate-gradient-x {
+    animation: none;
+  }
+}

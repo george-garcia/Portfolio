@@ -74,6 +74,14 @@ export function Navbar() {
                 {label}
               </a>
             ))}
+            <a
+              href="https://github.com/george-garcia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-slate-300 hover:text-white"
+            >
+              <Github className="h-4 w-4" /> GitHub
+            </a>
           </div>
         </div>
       )}

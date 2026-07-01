@@ -37,6 +37,10 @@ function TerminalCard() {
             <span className="text-emerald-300">'AWS'</span>],
           </div>
           <div className="pl-4">
+            <span className="text-slate-500">latestShip</span>:{' '}
+            <span className="text-emerald-300">'Glow, a video dating app'</span>,
+          </div>
+          <div className="pl-4">
             <span className="text-slate-500">openToWork</span>:{' '}
             <span className="text-fuchsia-400">true</span>,
           </div>

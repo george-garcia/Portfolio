@@ -1,3 +1,4 @@
+import { MotionConfig } from 'framer-motion'
 import { Background } from './components/Background'
 import { ScrollProgress } from './components/ScrollProgress'
 import { Navbar } from './components/Navbar'
@@ -10,7 +11,9 @@ import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <>
+    // reducedMotion="user" stills the entrance/hover transforms for people with
+    // "reduce motion" enabled; the CSS animations opt out via media query.
+    <MotionConfig reducedMotion="user">
       <Background />
       <ScrollProgress />
       <Navbar />
@@ -22,7 +25,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </MotionConfig>
   )
 }
 

@@ -75,6 +75,16 @@ export function ProjectCard({ project, featured }: { project: Project; featured?
           ))}
         </div>
 
+        {project.demoNote && (
+          <p className="mt-4 flex items-center gap-2 text-xs font-medium text-emerald-300/90">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-emerald-400" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            {project.demoNote}
+          </p>
+        )}
+
         <div className="mt-6 flex gap-3">
           {project.siteLink && (
             <a

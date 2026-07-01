@@ -3,8 +3,8 @@ import { SectionHeading } from '../components/SectionHeading'
 import { SKILL_GROUPS } from '../data/skills'
 
 const STATS: [string, string][] = [
-  ['4', 'Apps shipped'],
-  ['3', 'Full-stack builds'],
+  ['6', 'Apps in production'],
+  ['1', 'EC2 box running it all'],
   ['∞', 'Cups of coffee'],
 ]
 
@@ -20,9 +20,10 @@ export function About() {
             cloud infra and CI/CD as I am crafting delightful UIs.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-slate-400">
-            Recently I rebuilt this portfolio plus a banking platform, an online casino, and an IT
-            service desk. React and TypeScript up front, NestJS and Postgres on the back, all of it
-            deployed on AWS.
+            My latest build is Glow, a video dating app with real-time matching and WebRTC calls.
+            Before that came a banking platform with a double-entry ledger, an online casino, and an
+            IT service desk. React and TypeScript up front, NestJS and Postgres on the back, all of
+            it running on AWS behind one reverse proxy.
           </p>
 
           <div className="mt-8 grid grid-cols-3 gap-4">

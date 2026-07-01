@@ -42,9 +42,23 @@ export function Contact() {
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         <Reveal>
           <form ref={form} onSubmit={handleSubmit} className="glass space-y-4 rounded-3xl p-6 sm:p-8">
-            <input className={FIELD} name="user_name" placeholder="Your name" required />
-            <input className={FIELD} name="user_email" type="email" placeholder="you@email.com" required />
-            <textarea className={`${FIELD} resize-none`} name="message" rows={5} placeholder="Your message" required />
+            <input className={FIELD} name="user_name" placeholder="Your name" aria-label="Your name" required />
+            <input
+              className={FIELD}
+              name="user_email"
+              type="email"
+              placeholder="you@email.com"
+              aria-label="Your email"
+              required
+            />
+            <textarea
+              className={`${FIELD} resize-none`}
+              name="message"
+              rows={5}
+              placeholder="Your message"
+              aria-label="Your message"
+              required
+            />
             {error && <p className="text-sm font-medium text-red-400">{error}</p>}
             <button type="submit" disabled={sending || sent} className="btn btn-primary w-full py-3">
               {sent ? (
