@@ -84,7 +84,7 @@ export const projects: Project[] = [
     gitLink: 'https://github.com/george-garcia/Ticketing-tool-client',
     demoNote: 'One-click demo login, no signup',
     description:
-      'A ServiceNow-style IT ticketing console. Users open tickets; agents triage, assign, and resolve them through an activity timeline. Dashboards chart open, assigned, and overdue tickets by status and priority.',
+      'A ServiceNow-style IT ticketing console. Users open tickets; agents triage, assign, and resolve them through an activity timeline, with bulk actions, ticket templates, and CSV export. Dashboards chart tickets by status and priority and track SLA breaches and agent workload.',
     featured: true,
   },
   {

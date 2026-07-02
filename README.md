@@ -1,69 +1,57 @@
-# George Garcia Developer Portfolio
+# George Garcia — Developer Portfolio
 
-![Portfolio Demo](https://github.com/george-garcia/Portfolio/blob/master/src/public/portfoliogif.gif)
+The source for [georgegarciadev.com](https://georgegarciadev.com): a single-page site that showcases my
+full-stack work. It was rebuilt from the original Create React App version into a Vite + TypeScript app
+with a dark, glassmorphic theme, a data-driven projects section, and motion throughout.
 
-Welcome to my portfolio repository! This site showcases a selection of my key projects, highlighting my skills in **React**, **JavaScript**, **CSS**, and **Full-Stack Development**.
+## Tech stack
 
----
+- **Vite + React 18 + TypeScript**
+- **Tailwind CSS** for styling
+- **Framer Motion** for animation (aurora background, scroll reveals, rotating hero text)
+- **lucide-react** icons
+- **EmailJS** for the contact form (no backend needed)
 
-## About This Portfolio
+## Featured projects
 
-This portfolio is designed with a calm and earthy theme inspired by a serene duck family video on the hero page. It serves as both a personal introduction and a showcase of my technical work.
+The projects section is data-driven from [`src/data/projects.ts`](src/data/projects.ts):
 
-The site features:
+- **Glow** — a video-first dating app (NestJS, Postgres, Redis, LiveKit, Socket.IO).
+- **Mock Bank** — a mock retail bank on a double-entry ledger, with partner Network + Connect APIs and a staff admin console (NestJS, Postgres, Drizzle).
+- **Help Desk Hero** — a ServiceNow-style IT ticketing console with an activity timeline, bulk actions, templates, CSV export, and SLA/workload dashboards (React, RTK Query, NestJS, Cognito).
+- **Lucky Spin Casino** — a provably-fair casino that funds a wallet through Mock Bank's Network and Connect APIs (React, Express, SQLite).
+- **This portfolio** — the site itself.
 
-- Full-screen video hero section
-- Detailed project breakdowns with descriptions, tech tags, and live/demo links
-- Interactive GIF previews of project UIs
-- Responsive and accessible design
+## Run locally
 
----
+Requires Node.js 20+.
 
-## Projects Featured
+```bash
+npm install
+npm run dev        # start the dev server (http://localhost:5173)
+npm run build      # type-check + production build to dist/
+npm run preview    # serve the built dist/ locally
+```
 
-### Help Desk Hero (Front-End)
+### Environment
 
-A full-stack IT ticketing system with user authentication and dashboard stats.
+The contact form uses EmailJS. Copy the example file and fill in your values (Vite only exposes vars
+prefixed with `VITE_`):
 
-- **Technologies:** React, Redux Toolkit, React Router, JWT Authentication, Nivo Charts
-- [Live Site](http://helpdeskhero.georgegarciadev.com)
-- [GitHub Repo](https://github.com/george-garcia/Ticketing-tool-client)
+```bash
+cp .env.example .env
+```
 
----
+```
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-### Help Desk Hero API (Back-End)
+The form degrades gracefully when these are unset (it just reports that messaging is unavailable).
 
-REST API backend supporting Help Desk Hero with secure data operations.
+## Deployment
 
-- **Technologies:** Node.js, Express, MongoDB, Mongoose, JWT, bcrypt
-- [API Site](https://helpdeskhero.georgegarciadev.com)
-- [GitHub Repo](https://github.com/george-garcia/Ticketing-tool-server)
-
----
-
-### CyberFortressIT
-
-A managed IT services marketing website with email integration.
-
-- **Technologies:** React, JavaScript, CSS
-- [Live Site](https://cyberfortressit.georgegarciadev.com)
-- [GitHub Repo](https://github.com/george-garcia/tech-website-cluster)
-
----
-
-### This Portfolio Website
-
-The code powering this portfolio including the hero video and project sections.
-
-- **Technologies:** React, JavaScript, CSS, EmailJS
-- [Live Site](https://georgegarciadev.com)
-- [GitHub Repo](https://github.com/george-garcia/Portfolio)
-
----
-
-## How to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/george-garcia/Portfolio.git
-   ```
+The build is a set of static files in `dist/`. In production it ships as an nginx container
+(see [`Dockerfile`](Dockerfile) + [`nginx.conf`](nginx.conf)) and runs behind Caddy as part of the
+one-box Docker Compose stack that hosts the projects above under `georgegarciadev.com`.
